@@ -1,0 +1,4 @@
+vagrant 1.8.1のためbundler 1.10.6を入れる
+```
+bundle _1.10.5_ exec rake spec
+```
