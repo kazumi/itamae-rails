@@ -1,9 +1,0 @@
-{
-    "rtn_rbenv": {
-        "user": "vagrant",
-        "versions": {
-            "2.3.0": []
-        },
-        "global": "2.3.0"
-    }
-}
