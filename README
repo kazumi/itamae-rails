@@ -1,4 +1,10 @@
-vagrant 1.8.1のためbundler 1.10.6を入れる
+## Usage
+
 ```
-bundle _1.10.5_ exec rake spec
+vagrant up
+bundle exec itamae ssh -h 192.168.33.109 -u vagrant -j nodes/node.json recipes/ruby.rb -i .vagrant/machines/default/virtualbox/private_key
+bundle exec rake spec
 ```
+
+* vagrant 1.8.1のためbundler 1.10.6を入れる
+* itamae実行時、ERROR: Net::SSH::HostKeyMismatchが起きることがある。その場合~/.ssh/known_hosts に記述されている192.168.33.109を削除してからやり直す。
