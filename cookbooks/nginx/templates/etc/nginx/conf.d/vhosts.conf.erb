@@ -5,7 +5,6 @@ upstream unicorn {
 server {
   listen 80;
   charset utf-8;
-  server_name <%= node[:hostname] %>.gdev.dena.jp;
 
   root /data/<%= node[:system_user_name] %>/<%= node[:app_name] %>/current/public;
 
@@ -24,36 +23,3 @@ server {
   }
 }
 
-server {
-  listen 80;
-  charset utf-8;
-  server_name api.<%= node[:hostname] %>.gdev.dena.jp;
-
-  root /data/<%= node[:system_user_name] %>/<%= node[:app_name] %>/current/public;
-
-  location / {
-    proxy_pass http://unicorn;
-  }
-}
-
-server {
-  listen 80;
-  charset utf-8;
-  server_name ope.<%= node[:hostname] %>.gdev.dena.jp;
-
-  root /data/<%= node[:system_user_name] %>/<%= node[:app_name] %>/current/public;
-
-  location / {
-    proxy_pass http://unicorn;
-  }
-
-  location ~ "^/assets/(.*/)*.*-[0-9a-f]{32}.*" {
-    gzip_static on;
-    expires     max;
-    add_header  Cache-Control public;
-  }
-
-  location /favicon.ico {
-    access_log off;
-  }
-}
