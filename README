@@ -12,7 +12,5 @@ bundle exec rake spec
 mysql_secure_installation
 ```
 
-/root/.mysql_secret に初期パスワードが記載されている
-
 
 * itamae実行時、ERROR: Net::SSH::HostKeyMismatchが起きることがある。その場合~/.ssh/known_hosts に記述されている192.168.33.109を削除してからやり直す。
