@@ -1,0 +1,5 @@
+export APP_USAGE=fixme
+
+# Don't touch the below
+NGINX=/usr/sbin/nginx
+CONFFILE=/etc/nginx/nginx.conf

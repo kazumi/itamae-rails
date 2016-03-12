@@ -7,5 +7,5 @@ package "mysql-community-server"
 package "mysql-community-devel"
 
 service "mysqld" do
-  action :start
+  action [:enable, :start]
 end
