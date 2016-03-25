@@ -19,7 +19,7 @@ end
 
 execute "add prompt to .bashrc" do
     user USER_NAME
-    command "cat ~/bashrc_setting >> #{BASHRC}; rm ~/bashrc_setting"
+    command "cat ~/bashrc_setting >> #{BASHRC}; rm -f ~/bashrc_setting"
 end
 
 execute "install neobundle" do
