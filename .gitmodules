@@ -1,0 +1,3 @@
+[submodule "cookbooks/setting/remote_files/setting"]
+	path = cookbooks/setting/remote_files/setting
+	url = git@github.com:atake831/setting.git
