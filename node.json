@@ -14,6 +14,9 @@
             "use": "false",
             "version": "2.8.24"
         }
+    },
+    "mysql": {
+        "user_name": "prsys",
+        "database_name": "pr_dev"
     }
-
 }

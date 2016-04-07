@@ -6,6 +6,10 @@ module RecipeHelper
   end
 end
 
+require 'yaml'
+secret = YAML.load_file("secret.yml")
+node[:secret] = secret
+
 Itamae::Recipe::EvalContext.include(RecipeHelper)
 
 include_recipe File.join("roles", node[:role], "default.rb")
