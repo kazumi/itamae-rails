@@ -17,4 +17,5 @@ package "git"
 package "vim"
 package "wget"
 package "sqlite-devel"
+package "tcl"
 

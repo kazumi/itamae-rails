@@ -12,11 +12,11 @@ server {
     proxy_pass http://unicorn;
   }
 
-  location ~ "^/assets/(.*/)*.*-[0-9a-f]{32}.*" {
-    gzip_static on;
-    expires     max;
-    add_header  Cache-Control public;
-  }
+#  location ~ "^/assets/(.*/)*.*-[0-9a-f]{32}.*" {
+#    gzip_static on;
+#    expires     max;
+#    add_header  Cache-Control public;
+#  }
 
   location /favicon.ico {
     access_log off;
