@@ -27,7 +27,7 @@ execute "install neobundle" do
     command "mkdir -p #{HOME}/.vim/bundle; git clone https://github.com/Shougo/neobundle.vim #{HOME}/.vim/bundle/neobundle.vim"
 end
 
-remote_file "#{HOME}/.vimrc" do
-    source "remote_files/setting/vim/.vimrc"
-end
+# remote_file "#{HOME}/.vimrc" do
+#     source "remote_files/setting/vim/.vimrc"
+# end
 
