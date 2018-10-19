@@ -1,12 +1,12 @@
 upstream unicorn {
-  server unix:/data/<%= node[:system_user_name] %>/<%= node[:app_name] %>/tmp/sockets/unicorn.sock;
+  server unix:/data/<%= node[:system_user_name] %>/<%= node[:app_name] %>/shared/tmp/sockets/unicorn.sock;
 }
 
 server {
   listen 80;
   charset utf-8;
 
-  root /data/<%= node[:system_user_name] %>/<%= node[:app_name] %>/public;
+  root /data/<%= node[:system_user_name] %>/<%= node[:app_name] %>/current/public;
 
   location / {
     proxy_pass http://unicorn;
