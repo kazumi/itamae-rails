@@ -7,6 +7,9 @@ execute "yum update -y" do
 end
 
 package "epel-release"
+package "kernel"
+package "kernel-devel"
+package "kernel-headers"
 package "gcc"
 package "gcc-c++"
 package "openssl-devel"
